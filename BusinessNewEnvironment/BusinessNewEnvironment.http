@@ -1,0 +1,6 @@
+@BusinessNewEnvironment_HostAddress = http://localhost:5187
+
+GET {{BusinessNewEnvironment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
