@@ -1,10 +1,7 @@
-using Business.Data;
-using Business.Service;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddHttpClient<GeocodingService>();
 
 builder.Services.AddCors(options =>
 {
