@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Business.Models
+namespace BusinessNewEnvironment.Models
 {
     public class AdminLoginRequest
     {

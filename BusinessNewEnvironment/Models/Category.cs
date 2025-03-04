@@ -1,4 +1,4 @@
-﻿namespace Business.Models
+﻿namespace BusinessNewEnvironment.Models
 {
     public class Category
     {
