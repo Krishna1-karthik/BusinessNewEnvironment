@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecificOrigin",
-            builder => builder.WithOrigins("https://krishna1-karthik.github.io")
+            builder => builder.WithOrigins("http://localhost:4200")
             .AllowAnyOrigin()//deployed url https://sasmita2622606.github.io, http://localhost:4200
                               .AllowAnyHeader()
                               .AllowAnyMethod());

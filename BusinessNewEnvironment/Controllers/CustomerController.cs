@@ -67,16 +67,12 @@ namespace Business.Controllers
         }
 
         [HttpGet("check-email")]
-        public async Task<ActionResult<bool>> CheckEmailExistsBusiness(string email)
+        public async Task<ActionResult<bool>> CheckEmailExists(string email)
         {
-            //bool exists = await _context.Businesses.AnyAsync(u => u.EmailId == email);
-            //return Ok(exists);
-            bool exists = await _context.Businesses.AnyAsync(b => b.EmailId == email) ||
-                  await _context.Customers.AnyAsync(c => c.Cus_EmailId == email);
-
+            bool exists = await _context.Customers.AnyAsync(u => u.Cus_EmailId == email);
             return Ok(exists);
         }
-
+        
         private (string Token, DateTime Expiration) GenerateToken(string email, bool rememberMe)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
