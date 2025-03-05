@@ -6,7 +6,7 @@ namespace BusinessNewEnvironment.Service
     public class SubAdminServices
     {
         private readonly EmailService _emailService;
-        public SubAdminServices(EmailService emailService) //
+        public SubAdminServices(EmailService emailService)
         {
             _emailService = emailService;
         }
