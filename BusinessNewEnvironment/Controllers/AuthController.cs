@@ -189,7 +189,7 @@ namespace Banking_Application.Controllers
         }
         private async Task SendResetEmail(string email, string token)
         {
-            string resetLink = $"https://github.com/Krishna1-karthik/BusinessApplication/Reset-password?token={token}";
+            string resetLink = $"https://krishna1-karthik.github.io/BusinessApplication/Reset-password?token={token}";
 
             string subject = "Password Reset Request";
             string body = $"Click the following link to reset your password: <a href='{resetLink}'>Reset Password</a>";
