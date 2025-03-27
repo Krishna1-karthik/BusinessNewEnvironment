@@ -95,10 +95,10 @@ namespace Banking_Application.Controllers
         private string GenerateBusinessToken(Busines business)
         {
             var claims = new[] {
-                new Claim(ClaimTypes.Email, business.EmailId),
+                new Claim("EmailId", business.EmailId),
                 new Claim("BusinessID", business.BusinessID.ToString()),
-                new Claim("EmailId", business.EmailId.ToString())
-
+                new Claim("EmailId", business.EmailId.ToString()),
+                new Claim("RoleID", business.RoleID.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
@@ -113,13 +113,14 @@ namespace Banking_Application.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
         private string GenerateCustomerToken(Customer customer)
         {
             var claims = new[] {
-                new Claim(ClaimTypes.Email, customer.Cus_EmailId),
+                new Claim("Email", customer.Cus_EmailId),
                 new Claim("Cus_Id", customer.Cus_Id.ToString()),
-                new Claim("EmailId", customer.Cus_EmailId.ToString())
-
+                new Claim("EmailId", customer.Cus_EmailId.ToString()),
+                new Claim("RoleID", customer.RoleID.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
@@ -134,6 +135,7 @@ namespace Banking_Application.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
         [HttpPost("forgot-password")]
         public IActionResult ForgotPassword(BusinessNewEnvironment.Dto.ForgotPasswordRequest request)
         {
@@ -167,6 +169,7 @@ namespace Banking_Application.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
         private string GeneratePasswordResetToken(string userId, string userType)
         {
             var claims = new[] {
@@ -189,7 +192,7 @@ namespace Banking_Application.Controllers
         }
         private async Task SendResetEmail(string email, string token)
         {
-            string resetLink = $"https://krishna1-karthik.github.io/BusinessApplication/Reset-password?token={token}";
+            string resetLink = $"https://sasmita2622606.github.io/BusinessApplication/Reset-password?token={token}";
 
             string subject = "Password Reset Request";
             string body = $"Click the following link to reset your password: <a href='{resetLink}'>Reset Password</a>";
@@ -197,6 +200,7 @@ namespace Banking_Application.Controllers
             // Implement your email sending logic here
             await _emailService.SendEmailForForgotPasswordAsync(email, subject, body);
         }
+
         [HttpPost("reset-password")]
         public IActionResult ResetPassword(BusinessNewEnvironment.Dto.ResetPasswordRequest request)
         {
@@ -255,12 +259,13 @@ namespace Banking_Application.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
         private string GenerateTokenforAdmin(AdminLoginRequest adminLogin)
         {
             var claims = new[] {
             new Claim("EmailId", adminLogin.EmailId),
             new Claim("Id", adminLogin.Id.ToString()),
-            new Claim("RoleId", adminLogin.RoleId.ToString())
+            new Claim("RoleID", adminLogin.RoleId.ToString())
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!));
