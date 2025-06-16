@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BusinessNewEnvironment.Migrations
 {
     [DbContext(typeof(BusinessContext))]
-    [Migration("20250403153739_test")]
-    partial class test
+    [Migration("20250616163953_db")]
+    partial class db
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
