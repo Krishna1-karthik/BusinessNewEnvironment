@@ -1,0 +1,1185 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-23T13:56:16.1316915Z",
+  "analysisEndTime": "2026-09-23T13:56:18.5479929Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 8,
+      "incidents": 41,
+      "effort": 41
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 37,
+        "Optional": 0,
+        "Potential": 4,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 3,
+        "Project": 1,
+        "Api": 37
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+      "startingProject": true,
+      "issues": 6,
+      "storyPoints": 41,
+      "properties": {
+        "appName": "BusinessNewEnvironment",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 60,
+        "numberOfCodeFiles": 28,
+        "linesTotal": 20561,
+        "linesOfCode": 2350,
+        "totalApiScanned": 3103,
+        "minLinesOfCodeToChange": 37,
+        "maxLinesOfCodeToChange": 37
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "5e73e09f-b902-4d55-8804-5bd894dd41e3",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12",
+              "protected": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12",
+            "label": "Microsoft.EntityFrameworkCore 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "11d02039-3068-420d-8669-979e98fbabf8",
+          "ruleId": "NuGet.0002",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.12",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.12"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.12",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.12",
+            "label": "Microsoft.EntityFrameworkCore.Tools 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7bac3680-057e-4c7b-b4be-8c3c3acaa756",
+          "ruleId": "NuGet.0001",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.21.0\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.21.0\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+            "snippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.21.0\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets, 1.21.0\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets 1.21.0",
+            "properties": {
+              "PackageId": "Microsoft.VisualStudio.Azure.Containers.Tools.Targets",
+              "PackageVersion": "1.21.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8830ebc1-55a2-447a-98e6-a746d198bf35",
+          "ruleId": "Project.0002",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "8f348d70-b110-4807-a3d1-7b98cc552fc3",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 280,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0ab474bc-9a66-4866-8bf6-b64ea9fbc32b",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 280,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "8f336ff4-e978-41d5-9365-4730b77f0827",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 280,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "dda5e3a5-55a5-4abc-bd62-0217adabc7a4",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 273,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "302f889d-6e42-4d6a-b3ba-2144ed6dba5b",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 273,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "68edcea7-9e61-4f8d-843f-a3cea83ac464",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var userType = jwtToken.Claims.First(x =\u003E x.Type == \u0022UserType\u0022).Value;",
+              "protected": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var userType = jwtToken.Claims.First(x =\u003E x.Type == \u0022UserType\u0022).Value;",
+            "protectedSnippet": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "label": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 228,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "82f89ade-d3a7-49d5-80c1-6c2c24ee04a0",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var userId = jwtToken.Claims.First(x =\u003E x.Type == \u0022UserID\u0022).Value;",
+              "protected": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var userId = jwtToken.Claims.First(x =\u003E x.Type == \u0022UserID\u0022).Value;",
+            "protectedSnippet": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "label": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 227,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "efa8b514-56d5-45a1-a332-444b5d5a5213",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var principal = tokenHandler.ValidateToken(request.Token, tokenValidationParameters, out securityToken);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var principal = tokenHandler.ValidateToken(request.Token, tokenValidationParameters, out securityToken);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 224,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "5e3a8da3-4536-4478-a0be-801ef1ccf672",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 211,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "2fdf7db1-3896-4a11-bfb0-75153b8ddd29",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 211,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "4cd8d4ae-653e-42ad-857d-70718621f5cf",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 190,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "9789d02d-ef87-4ca4-8304-554407d079e2",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 190,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "00c20045-b7d3-4f25-a828-0d4f4fe822cd",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 190,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "8de66190-9549-4edb-a445-11c00b29bbb2",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(15), // Token valid for 15 minutes\r\n                signingCredentials: creds);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(15), // Token valid for 15 minutes\r\n                signingCredentials: creds);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 183,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e6284678-30b5-4042-a993-225bc1aed6d3",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(15), // Token valid for 15 minutes\r\n                signingCredentials: creds);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(15), // Token valid for 15 minutes\r\n                signingCredentials: creds);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 183,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "225a258d-1354-4718-b319-f8779998cebc",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 135,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "2f495495-2739-4ac4-9c3d-4a3b7a3c45dc",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 135,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "8874d119-4576-432e-82ac-3201a4afc8da",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 135,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "6b2efd07-1d4a-4843-9822-2ff4e404e7cc",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 128,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "cbda9f93-56ae-4243-a9a6-f6dc4c005d88",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 128,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "9267b60f-d2ad-4e4b-b81c-83072acbd48f",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 113,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "87883c1b-ce5f-4ea9-bd4a-6c1ff0fe31e9",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 113,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "439d2e71-c1a8-40ff-8cc8-7b3d180741d1",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return new JwtSecurityTokenHandler().WriteToken(token);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "return new JwtSecurityTokenHandler().WriteToken(token);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 113,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "993886ea-cb3a-499f-ad91-3d798e71afbd",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 106,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "b3e56303-82b4-4442-8e1e-7ac65346b846",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AuthController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n                issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n                audience: _configuration[\u0022Jwt:Audience\u0022],\r\n                claims: claims,\r\n                expires: DateTime.Now.AddMinutes(5),\r\n                signingCredentials: creds);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "properties": {
+              "CharCount": "12520"
+            },
+            "line": 106,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "47a8916d-f564-48a2-abc1-72b144cd2aa8",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var roleIdfromToken = jwtToken.Claims.First(x =\u003E x.Type == \u0022RoleID\u0022).Value;",
+              "protected": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AdminController.cs",
+            "snippet": "var roleIdfromToken = jwtToken.Claims.First(x =\u003E x.Type == \u0022RoleID\u0022).Value;",
+            "protectedSnippet": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "label": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "properties": {
+              "CharCount": "8974"
+            },
+            "line": 78,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "e0eed87b-d9e4-4156-bdd8-c1da37d82a59",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var emailIdfromToken = jwtToken.Claims.First(x =\u003E x.Type == \u0022EmailId\u0022).Value;",
+              "protected": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AdminController.cs",
+            "snippet": "var emailIdfromToken = jwtToken.Claims.First(x =\u003E x.Type == \u0022EmailId\u0022).Value;",
+            "protectedSnippet": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "label": "P:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.Claims",
+            "properties": {
+              "CharCount": "8974"
+            },
+            "line": 77,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "180fb937-26b1-4724-abc2-35833c4848c4",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var principal = tokenHandler.ValidateToken(request.Token, tokenValidationParameters, out securityToken);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AdminController.cs",
+            "snippet": "var principal = tokenHandler.ValidateToken(request.Token, tokenValidationParameters, out securityToken);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(System.String,Microsoft.IdentityModel.Tokens.TokenValidationParameters,Microsoft.IdentityModel.Tokens.SecurityToken@)",
+            "properties": {
+              "CharCount": "8974"
+            },
+            "line": 74,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "a9232d9f-f87c-421b-8278-2030fe1f5e60",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AdminController.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "8974"
+            },
+            "line": 61,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "65c2cc13-f650-4463-8d30-532ff98868eb",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var tokenHandler = new JwtSecurityTokenHandler();",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\AdminController.cs",
+            "snippet": "var tokenHandler = new JwtSecurityTokenHandler();",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "8974"
+            },
+            "line": 61,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "c5f9b46a-98a2-4523-b4cf-852d875b910f",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return (new JwtSecurityTokenHandler().WriteToken(token), expiration);",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\CustomerController.cs",
+            "snippet": "return (new JwtSecurityTokenHandler().WriteToken(token), expiration);",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler",
+            "properties": {
+              "CharCount": "5262"
+            },
+            "line": 128,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "c4a020c8-b201-4dd2-ac40-51f5ffad4ebe",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return (new JwtSecurityTokenHandler().WriteToken(token), expiration);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\CustomerController.cs",
+            "snippet": "return (new JwtSecurityTokenHandler().WriteToken(token), expiration);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.#ctor",
+            "properties": {
+              "CharCount": "5262"
+            },
+            "line": 128,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "1d3b7ac6-1714-4746-90b3-e99b831f08fc",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return (new JwtSecurityTokenHandler().WriteToken(token), expiration);",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\CustomerController.cs",
+            "snippet": "return (new JwtSecurityTokenHandler().WriteToken(token), expiration);",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(Microsoft.IdentityModel.Tokens.SecurityToken)",
+            "properties": {
+              "CharCount": "5262"
+            },
+            "line": 128,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "732f0da9-1f1a-4902-8394-1c4a8f3ad184",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n            issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n            audience: _configuration[\u0022Jwt:Audience\u0022],\r\n            claims: new[] { new Claim(ClaimTypes.Email, email) },\r\n            expires: expiration,\r\n            signingCredentials: creds\r\n            );",
+              "protected": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\CustomerController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n            issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n            audience: _configuration[\u0022Jwt:Audience\u0022],\r\n            claims: new[] { new Claim(ClaimTypes.Email, email) },\r\n            expires: expiration,\r\n            signingCredentials: creds\r\n            );",
+            "protectedSnippet": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "label": "T:System.IdentityModel.Tokens.Jwt.JwtSecurityToken",
+            "properties": {
+              "CharCount": "5262"
+            },
+            "line": 120,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "b5039037-86c4-4ffc-a6c6-9a39e1000d14",
+          "ruleId": "Api.0001",
+          "description": "API is unavailable in net8.0 ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var token = new JwtSecurityToken(\r\n            issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n            audience: _configuration[\u0022Jwt:Audience\u0022],\r\n            claims: new[] { new Claim(ClaimTypes.Email, email) },\r\n            expires: expiration,\r\n            signingCredentials: creds\r\n            );",
+              "protected": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Controllers\\CustomerController.cs",
+            "snippet": "var token = new JwtSecurityToken(\r\n            issuer: _configuration[\u0022Jwt:Issuer\u0022],\r\n            audience: _configuration[\u0022Jwt:Audience\u0022],\r\n            claims: new[] { new Claim(ClaimTypes.Email, email) },\r\n            expires: expiration,\r\n            signingCredentials: creds\r\n            );",
+            "protectedSnippet": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "label": "M:System.IdentityModel.Tokens.Jwt.JwtSecurityToken.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.Nullable{System.DateTime},System.Nullable{System.DateTime},Microsoft.IdentityModel.Tokens.SigningCredentials)",
+            "properties": {
+              "CharCount": "5262"
+            },
+            "line": 120,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "abeae96a-3162-46b3-beef-7736d3b1c45b",
+          "ruleId": "Api.0002",
+          "description": "RNGCryptoServiceProvider is obsolete. To generate a random number, use one of the RandomNumberGenerator static methods instead. ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "using (var rng = new RNGCryptoServiceProvider()) // need to create a static method for random number generating\r\n            {\r\n                byte[] randomBytes = new byte[length];\r\n                rng.GetBytes(randomBytes);\r\n                for (int i = 0; i \u003C randomBytes.Length; i\u002B\u002B)\r\n                {\r\n                    password.Append(validChars[randomBytes[i] % validChars.Length]);\r\n                }\r\n            }",
+              "protected": "T:System.Security.Cryptography.RNGCryptoServiceProvider"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Service\\SubAdminServices.cs",
+            "snippet": "using (var rng = new RNGCryptoServiceProvider()) // need to create a static method for random number generating\r\n            {\r\n                byte[] randomBytes = new byte[length];\r\n                rng.GetBytes(randomBytes);\r\n                for (int i = 0; i \u003C randomBytes.Length; i\u002B\u002B)\r\n                {\r\n                    password.Append(validChars[randomBytes[i] % validChars.Length]);\r\n                }\r\n            }",
+            "protectedSnippet": "T:System.Security.Cryptography.RNGCryptoServiceProvider",
+            "label": "T:System.Security.Cryptography.RNGCryptoServiceProvider",
+            "properties": {
+              "CharCount": "2501"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://aka.ms/dotnet-warnings/SYSLIB0023",
+                "isCustom": false
+              }
+            ],
+            "line": 29,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "feec54ac-aa47-4963-a115-ee14530a2ec3",
+          "ruleId": "Api.0003",
+          "description": "URI query redaction in IHttpClientFactory logs ",
+          "projectPath": "BusinessNewEnvironment\\BusinessNewEnvironment.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.AddHttpClient();",
+              "protected": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)"
+            },
+            "kind": "File",
+            "path": "BusinessNewEnvironment\\Program.cs",
+            "snippet": "builder.Services.AddHttpClient();",
+            "protectedSnippet": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "label": "M:Microsoft.Extensions.DependencyInjection.HttpClientFactoryServiceCollectionExtensions.AddHttpClient(Microsoft.Extensions.DependencyInjection.IServiceCollection)",
+            "properties": {
+              "CharCount": "1913"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/9.0/query-redaction-logs.md",
+                "isCustom": false
+              }
+            ],
+            "line": 30,
+            "column": 0
+          }
+        }
+      ],
+      "features": [
+        {
+          "featureId": "IdentityModel",
+          "incidents": [
+            "b5039037-86c4-4ffc-a6c6-9a39e1000d14",
+            "732f0da9-1f1a-4902-8394-1c4a8f3ad184",
+            "1d3b7ac6-1714-4746-90b3-e99b831f08fc",
+            "c4a020c8-b201-4dd2-ac40-51f5ffad4ebe",
+            "c5f9b46a-98a2-4523-b4cf-852d875b910f",
+            "65c2cc13-f650-4463-8d30-532ff98868eb",
+            "a9232d9f-f87c-421b-8278-2030fe1f5e60",
+            "180fb937-26b1-4724-abc2-35833c4848c4",
+            "e0eed87b-d9e4-4156-bdd8-c1da37d82a59",
+            "47a8916d-f564-48a2-abc1-72b144cd2aa8",
+            "b3e56303-82b4-4442-8e1e-7ac65346b846",
+            "993886ea-cb3a-499f-ad91-3d798e71afbd",
+            "439d2e71-c1a8-40ff-8cc8-7b3d180741d1",
+            "87883c1b-ce5f-4ea9-bd4a-6c1ff0fe31e9",
+            "9267b60f-d2ad-4e4b-b81c-83072acbd48f",
+            "cbda9f93-56ae-4243-a9a6-f6dc4c005d88",
+            "6b2efd07-1d4a-4843-9822-2ff4e404e7cc",
+            "8874d119-4576-432e-82ac-3201a4afc8da",
+            "2f495495-2739-4ac4-9c3d-4a3b7a3c45dc",
+            "225a258d-1354-4718-b319-f8779998cebc",
+            "e6284678-30b5-4042-a993-225bc1aed6d3",
+            "8de66190-9549-4edb-a445-11c00b29bbb2",
+            "00c20045-b7d3-4f25-a828-0d4f4fe822cd",
+            "9789d02d-ef87-4ca4-8304-554407d079e2",
+            "4cd8d4ae-653e-42ad-857d-70718621f5cf",
+            "2fdf7db1-3896-4a11-bfb0-75153b8ddd29",
+            "5e3a8da3-4536-4478-a0be-801ef1ccf672",
+            "efa8b514-56d5-45a1-a332-444b5d5a5213",
+            "82f89ade-d3a7-49d5-80c1-6c2c24ee04a0",
+            "68edcea7-9e61-4f8d-843f-a3cea83ac464",
+            "302f889d-6e42-4d6a-b3ba-2144ed6dba5b",
+            "dda5e3a5-55a5-4abc-bd62-0217adabc7a4",
+            "8f336ff4-e978-41d5-9365-4730b77f0827",
+            "0ab474bc-9a66-4866-8bf6-b64ea9fbc32b",
+            "8f348d70-b110-4807-a3d1-7b98cc552fc3"
+          ]
+        },
+        {
+          "featureId": "CryptographyLegacy",
+          "incidents": [
+            "abeae96a-3162-46b3-beef-7736d3b1c45b"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0001": {
+      "id": "NuGet.0001",
+      "isFeature": false,
+      "description": "NuGet package is incompatible with selected target framework.\n\nPackage needs to be upgraded to a version supporting selected project target framework. If there no new package versions supporting new target framework, different package needs to be used and all code needs to be upgraded to new API.",
+      "label": "NuGet package is incompatible",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262529",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
+      "label": "Binary incompatible for selected .NET version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "IdentityModel": {
+      "id": "IdentityModel",
+      "isFeature": false,
+      "description": "Windows Identity Foundation (WIF), SAML, and claims-based authentication APIs that have been replaced by modern identity libraries. WIF was the original identity framework for .NET Framework. Migrate to Microsoft.IdentityModel.* packages (modern identity stack).",
+      "label": "IdentityModel \u0026 Claims-based Security",
+      "severity": "Mandatory",
+      "effort": 4,
+      "links": [
+        {
+          "title": "Microsoft.IdentityModel packages",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2341614",
+          "isCustom": false
+        }
+      ]
+    },
+    "CryptographyLegacy": {
+      "id": "CryptographyLegacy",
+      "isFeature": false,
+      "description": "Obsolete or insecure cryptographic algorithms that have been deprecated for security reasons. These algorithms are no longer considered secure by modern standards. Migrate to modern cryptographic APIs using secure algorithms.",
+      "label": "Legacy Cryptography",
+      "severity": "Mandatory",
+      "effort": 2,
+      "links": [
+        {
+          "title": "Cryptography in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2341612",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
