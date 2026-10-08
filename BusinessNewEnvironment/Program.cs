@@ -1,6 +1,7 @@
 using Business.Controllers;
 using BusinessNewEnvironment.Data;
 using BusinessNewEnvironment.Service;
+using BusinessNewEnvironment.Middleware;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 
@@ -19,7 +20,50 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddTransient<EmailService>();
 builder.Services.AddTransient<SubAdminServices>();
+builder.Services.AddTransient<CachingService>();
+builder.Services.AddTransient<DistanceCachingService>();
 builder.Services.AddHttpClient<BusinessController>();
+
+// Add distributed caching (in-memory for development, Redis recommended for production)
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDistributedMemoryCache();
+}
+else
+{
+    // TODO: Configure Redis connection for production
+    // builder.Services.AddStackExchangeRedisCache(options =>
+    // {
+    //     options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    // });
+    builder.Services.AddDistributedMemoryCache();
+}
+
+// Add response caching for HTTP-level caching
+builder.Services.AddResponseCaching();
+
+// Add response compression (gzip, brotli, deflate) to reduce bandwidth
+builder.Services.AddResponseCompression(options =>
+{
+    options.EnableForHttps = true;
+    options.Providers.Add<Microsoft.AspNetCore.ResponseCompression.GzipCompressionProvider>();
+    options.Providers.Add<Microsoft.AspNetCore.ResponseCompression.BrotliCompressionProvider>();
+    options.MimeTypes = Microsoft.AspNetCore.ResponseCompression.ResponseCompressionDefaults.MimeTypes.Concat(
+        new[] { "application/json", "text/plain", "text/css", "application/javascript", "text/javascript" }
+    );
+});
+
+// Configure Gzip compression
+builder.Services.Configure<Microsoft.AspNetCore.ResponseCompression.GzipCompressionProviderOptions>(options =>
+{
+    options.Level = System.IO.Compression.CompressionLevel.Optimal;
+});
+
+builder.Services.Configure<Microsoft.AspNetCore.ResponseCompression.BrotliCompressionProviderOptions>(options =>
+{
+    options.Level = System.IO.Compression.CompressionLevel.Optimal;
+});
+
 //builder.Services.AddDbContext<BusinessContext>(options =>
 //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDbContext<BusinessContext>(options =>
@@ -45,7 +89,21 @@ app.UseStaticFiles(new StaticFileOptions
 //}
 
 app.UseHttpsRedirection();
+
+// Add security headers (must be early)
+app.UseSecurityHeaders();
+
 app.UseCors("AllowSpecificOrigin");
+
+// Add response compression before response caching
+app.UseResponseCompression();
+
+// Add response caching middleware before static files
+app.UseResponseCaching();
+
+// Add image-specific caching headers middleware
+app.UseImageCaching();
+
 app.UseStaticFiles();
 
 app.UseAuthorization();

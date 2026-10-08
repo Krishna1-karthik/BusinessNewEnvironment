@@ -60,16 +60,23 @@ namespace Business.Controllers
         }
 
         [HttpGet("getcusdetailsbyid")]
+        [ResponseCache(Duration = 600, Location = ResponseCacheLocation.Any, NoStore = false)] // 10 minutes
         public async Task<ActionResult> getCustomerDetailByID(int cusId)
         {
-            var customerData = await _context.Customers.Where(u => u.Cus_Id == cusId).ToListAsync();
+            var customerData = await _context.Customers
+                .AsNoTracking()
+                .Where(u => u.Cus_Id == cusId)
+                .ToListAsync();
             return Ok(customerData);
         }
 
         [HttpGet("check-email")]
+        [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)] // 5 minutes
         public async Task<ActionResult<bool>> CheckEmailExists(string email)
         {
-            bool exists = await _context.Customers.AnyAsync(u => u.Cus_EmailId == email);
+            bool exists = await _context.Customers
+                .AsNoTracking()
+                .AnyAsync(u => u.Cus_EmailId == email);
             return Ok(exists);
         }
 

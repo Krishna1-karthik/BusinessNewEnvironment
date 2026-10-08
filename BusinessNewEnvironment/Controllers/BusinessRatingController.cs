@@ -27,12 +27,16 @@ namespace Business.Controllers
             }
 
             // Check if the BusinessID exists
-            var businessExists = await _context.Businesses.AnyAsync(b => b.BusinessID == rating.BusinessID);
+            var businessExists = await _context.Businesses
+                .AsNoTracking()
+                .AnyAsync(b => b.BusinessID == rating.BusinessID);
             if (!businessExists)
             {
                 return NotFound("Business not found.");
             }
-            var alreadyRated = await _context.BusinessRatings.AnyAsync(br => br.BusinessID == rating.BusinessID && br.RatedBy == rating.RatedBy);
+            var alreadyRated = await _context.BusinessRatings
+                .AsNoTracking()
+                .AnyAsync(br => br.BusinessID == rating.BusinessID && br.RatedBy == rating.RatedBy);
             if (alreadyRated)
             {
                 return BadRequest("Already have submitted rating for the business, Thank You!");
@@ -47,11 +51,13 @@ namespace Business.Controllers
 
         // GET: api/BusinessRatings/{id}
         [HttpGet("{businessId}")]
+        [ResponseCache(Duration = 600, Location = ResponseCacheLocation.Any, NoStore = false)] // 10 minutes
         public async Task<IActionResult> GetBusinessRating(int businessId)
         {
             var ratings = await _context.BusinessRatings
-         .Where(r => r.BusinessID == businessId)
-         .ToListAsync();
+                .AsNoTracking()
+                .Where(r => r.BusinessID == businessId)
+                .ToListAsync();
 
             if (!ratings.Any()) // Check if there are no ratings
             {
