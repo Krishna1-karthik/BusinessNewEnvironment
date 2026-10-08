@@ -47,9 +47,12 @@ namespace Business.Controllers
         }
 
         [HttpGet("check-email")]
+        [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, NoStore = false)] // 5 minutes
         public async Task<ActionResult<bool>> CheckEmailExists(string email)
         {
-            bool exists = await _businessContext.AdminLoginRequests.AnyAsync(u => u.EmailId == email);
+            bool exists = await _businessContext.AdminLoginRequests
+                .AsNoTracking()
+                .AnyAsync(u => u.EmailId == email);
             return Ok(exists);
         }
 
@@ -82,7 +85,9 @@ namespace Business.Controllers
             {
 
                 // Check if the user is a Business
-                var admin = _businessContext.AdminLoginRequests.SingleOrDefault(u => u.EmailId == emailIdfromToken);
+                var admin = _businessContext.AdminLoginRequests
+                    .AsNoTracking()
+                    .SingleOrDefault(u => u.EmailId == emailIdfromToken);
                 if (admin == null)
                 {
                     return BadRequest("User not found.");
@@ -120,7 +125,9 @@ namespace Business.Controllers
             else if (roleIdfromToken == "3")
             {
                 // Check if the user is a Business           
-                var user = _businessContext.Businesses.SingleOrDefault(u => u.EmailId == emailIdfromToken);
+                var user = _businessContext.Businesses
+                    .AsNoTracking()
+                    .SingleOrDefault(u => u.EmailId == emailIdfromToken);
                 if (user == null)
                 {
                     return BadRequest("User not found.");
@@ -160,7 +167,9 @@ namespace Business.Controllers
 
             else
             {
-                var user = _businessContext.Customers.SingleOrDefault(u => u.Cus_EmailId == emailIdfromToken);
+                var user = _businessContext.Customers
+                    .AsNoTracking()
+                    .SingleOrDefault(u => u.Cus_EmailId == emailIdfromToken);
                 if (user == null)
                 {
                     return BadRequest("User not found.");

@@ -1,0 +1,96 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(svg|cur|jpg|jpeg|png|apng|webp|gif|otf|ttf|woff|woff2)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-categories",
+      "urls": [
+        "/api/business/GetCategories"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "1h",
+        "maxSize": 100,
+        "timeout": "5s"
+      }
+    },
+    {
+      "name": "api-subcategories",
+      "urls": [
+        "/api/business/GetSubCategories/*"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "1h",
+        "maxSize": 200,
+        "timeout": "5s"
+      }
+    },
+    {
+      "name": "api-search",
+      "urls": [
+        "/api/business/search*"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "5m",
+        "maxSize": 500,
+        "timeout": "10s"
+      }
+    },
+    {
+      "name": "api-business-detail",
+      "urls": [
+        "/api/business/getbusinessdetailbyid/*"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "10m",
+        "maxSize": 200,
+        "timeout": "5s"
+      }
+    },
+    {
+      "name": "api-ratings",
+      "urls": [
+        "/api/businessrating/*"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "10m",
+        "maxSize": 300,
+        "timeout": "5s"
+      }
+    }
+  ],
+  "navigationUrls": [
+    "/**",
+    "!/**/*.*",
+    "!/**/__*"
+  ]
+}
